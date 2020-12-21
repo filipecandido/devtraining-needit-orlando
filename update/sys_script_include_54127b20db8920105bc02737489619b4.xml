@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58872_needit.CepAjax</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CepAjax</name>
+        <script><![CDATA[var CepAjax = Class.create();
+CepAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getAddress: function() {
+		var cep = this.getParameter("sysparm_cep");
+		var response = new x_58872_needit.CepUtils().getAddress(cep);
+		
+		return response;
+	},
+    type: 'CepAjax'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-10 03:18:07</sys_created_on>
+        <sys_id>54127b20db8920105bc02737489619b4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>CepAjax</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_54127b20db8920105bc02737489619b4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-10 03:24:41</sys_updated_on>
+    </sys_script_include>
+</record_update>
